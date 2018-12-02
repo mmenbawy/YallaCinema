@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_12_02_150819) do
-=======
-ActiveRecord::Schema.define(version: 2018_12_02_145237) do
->>>>>>> create-users
+ActiveRecord::Schema.define(version: 2018_12_02_211750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "cinemas", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -42,10 +37,17 @@ ActiveRecord::Schema.define(version: 2018_12_02_145237) do
     t.datetime "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "movie_id"
+    t.integer "cinema_id"
   end
 
-=======
->>>>>>> create-users
+  create_table "tickets_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "ticket_id", null: false
+    t.index ["ticket_id"], name: "index_tickets_users_on_ticket_id"
+    t.index ["user_id"], name: "index_tickets_users_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
