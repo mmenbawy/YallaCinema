@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booked_no: 1
+  time: 2018-12-02 16:08:19
+
+two:
+  booked_no: 1
+  time: 2018-12-02 16:08:19
