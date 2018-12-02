@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   get 'users/new'
   root 'home_page#show'
+  get '/search', to: 'home_page#show'
 
   #  resources :users
   
