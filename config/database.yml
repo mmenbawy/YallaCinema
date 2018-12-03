@@ -16,15 +16,16 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
-  # username: <%= ENV['POSTGRES_USER'] %>
-  # password: <%= ENV['POSTGRES_PASSWORD'] %>
-  username: 'yallacinema2'
-  password: '123'
-  host: localhost
+  encoding: utf8
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  #username: 'yallacinema2'
+  #password: '123'
+  host: <%= ENV["POSTGRES_HOST"] %>
   # For details on connection pooling, see  Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default

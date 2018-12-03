@@ -1,0 +1,27 @@
+version: '2'
+
+volumes:
+  db-data:
+    external: false
+
+services:
+  db:
+    environment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+    image: postgres
+    volumes:
+      - db-data:/usr/local/pgsql/data
+
+  app:
+    entrypoint: [bin/entry]
+    env_file: .env
+    build: .
+    command: ["rails","server","-b","0.0.0.0","-p","3000"]
+    # command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
