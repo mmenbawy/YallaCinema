@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home_page#show'
   get '/search', to: 'home_page#show'
 
-  #  resources :users
+  resources :users
   
   # root to: 'home#index'
   
