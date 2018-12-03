@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2018_12_03_150938) do
 
   create_table "movies", force: :cascade do |t|
     t.string "name"
+    t.integer "duration"
     t.date "release_date"
     t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "duration"
   end
 
   create_table "tickets", force: :cascade do |t|

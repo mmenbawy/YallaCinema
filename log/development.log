@@ -12827,3 +12827,1015 @@ Processing by HomePageController#search as HTML
 Completed 200 OK in 45ms (Views: 34.9ms | ActiveRecord: 4.4ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (4117.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yalla-cinema_development"[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (111.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yalla-cinema_test"[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (390.9ms)[0m  [1m[35mCREATE DATABASE "yalla-cinema_development" ENCODING = 'unicode'[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (365.0ms)[0m  [1m[35mCREATE DATABASE "yalla-cinema_test" ENCODING = 'unicode'[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (26.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(880892881333229520)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateCinemas (20181202150440)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "cinemas" ("id" bigserial primary key, "name" character varying, "address" character varying, "region" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202150440_create_cinemas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202150440"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMovies (20181202150558)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "name" character varying, "duration" integer, "release_date" date, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202150558_create_movies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202150558"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateTickets (20181202150819)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" bigserial primary key, "booked_no" integer, "time" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202150819_create_tickets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202150819"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddMidCidToTicket (20181202185359)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "tickets" ADD "movie_id" integer[0m
+  ↳ db/migrate/20181202185359_add_mid_cid_to_ticket.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "tickets" ADD "cinema_id" integer[0m
+  ↳ db/migrate/20181202185359_add_mid_cid_to_ticket.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202185359"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to ChangeTimeFromIntToStringInTicket (20181203051752)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "tickets" DROP COLUMN "time"[0m
+  ↳ db/migrate/20181203051752_change_time_from_int_to_string_in_ticket.rb:4
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "tickets" ADD "time" character varying[0m
+  ↳ db/migrate/20181203051752_change_time_from_int_to_string_in_ticket.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203051752"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddCapacityToTickets (20181203150938)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "tickets" ADD "capacity" integer[0m
+  ↳ db/migrate/20181203150938_add_capacity_to_tickets.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "tickets" RENAME COLUMN "time" TO "showtime"[0m
+  ↳ db/migrate/20181203150938_add_capacity_to_tickets.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203150938"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-03 16:05:26.368922"], ["updated_at", "2018-12-03 16:05:26.368922"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(880892881333229520)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/search" for 127.0.0.1 at 2018-12-03 17:05:53 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2018-12-03 17:05:59 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gzr02UXnewc5gJn+ANzzqrxtLjr0El6YJlFJAK/plu5h1qiLxQYQTlvvRY8U9zjFumU7lWhjr05L7nGo92AOww==", "region"=>"Tagamoa", "time"=>"10am", "commit"=>"Search"}
+  [1m[36mTicket Load (1.3ms)[0m  [1m[34m
+    Select t.*, c.*, m.*
+    from tickets t
+    inner join cinemas c on c.id = t.cinema_id
+    inner join movies m on m.id = t.movie_id
+    where c.region = 'Tagamoa' and
+          t.showtime = '10am' [0m
+  ↳ app/models/ticket.rb:12
+  Rendering home_page/search.html.erb within layouts/application
+  Rendered home_page/search.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 15.7ms | ActiveRecord: 13.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 LIMIT $2[0m  [["name", "Fantastic Beasts"], ["LIMIT", 1]]
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "duration", "release_date", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fantastic Beasts"], ["duration", 125], ["release_date", "2018-11-14"], ["genre", "Action"], ["created_at", "2018-12-03 16:06:27.584783"], ["updated_at", "2018-12-03 16:06:27.584783"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 LIMIT $2[0m  [["name", "Avengers Infinity War"], ["LIMIT", 1]]
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "duration", "release_date", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Avengers Infinity War"], ["duration", 140], ["release_date", "2018-12-24"], ["genre", "Action"], ["created_at", "2018-12-03 16:06:27.595740"], ["updated_at", "2018-12-03 16:06:27.595740"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 LIMIT $2[0m  [["name", "A Star is Born"], ["LIMIT", 1]]
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "duration", "release_date", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "A Star is Born"], ["duration", 136], ["release_date", "2018-10-14"], ["genre", "Musical"], ["created_at", "2018-12-03 16:06:27.603498"], ["updated_at", "2018-12-03 16:06:27.603498"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 LIMIT $2[0m  [["name", "The Nutcracker and the Four Realms"], ["LIMIT", 1]]
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "duration", "release_date", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "The Nutcracker and the Four Realms"], ["duration", 100], ["release_date", "2018-09-25"], ["genre", "Fantasy"], ["created_at", "2018-12-03 16:06:27.621203"], ["updated_at", "2018-12-03 16:06:27.621203"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 LIMIT $2[0m  [["name", "Point 90 Cinema"], ["LIMIT", 1]]
+  [1m[36mCinema Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 LIMIT $2[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["LIMIT", 1]]
+  [1m[36mCinema Create (2.1ms)[0m  [1m[32mINSERT INTO "cinemas" ("name", "address", "region", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Point 90 Cinema"], ["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["region", "Tagamoa"], ["created_at", "2018-12-03 16:06:27.645846"], ["updated_at", "2018-12-03 16:06:27.645846"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 LIMIT $2[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 LIMIT $2[0m  [["address", "Nasr City, Cairo Governorate"], ["LIMIT", 1]]
+  [1m[36mCinema Create (0.5ms)[0m  [1m[32mINSERT INTO "cinemas" ("name", "address", "region", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["address", "Nasr City, Cairo Governorate"], ["region", "Tagamoa"], ["created_at", "2018-12-03 16:06:27.662666"], ["updated_at", "2018-12-03 16:06:27.662666"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 LIMIT $2[0m  [["name", "City Stars Cinema"], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 LIMIT $2[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["LIMIT", 1]]
+  [1m[36mCinema Create (0.4ms)[0m  [1m[32mINSERT INTO "cinemas" ("name", "address", "region", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "City Stars Cinema"], ["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["region", "Nasr City"], ["created_at", "2018-12-03 16:06:27.671690"], ["updated_at", "2018-12-03 16:06:27.671690"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 LIMIT $2[0m  [["name", "Sun City Cinema"], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 LIMIT $2[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["LIMIT", 1]]
+  [1m[36mCinema Create (0.3ms)[0m  [1m[32mINSERT INTO "cinemas" ("name", "address", "region", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sun City Cinema"], ["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["region", "Nasr City"], ["created_at", "2018-12-03 16:06:27.691330"], ["updated_at", "2018-12-03 16:06:27.691330"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 LIMIT $2[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 LIMIT $2[0m  [["address", "26th of July Corridor, Giza Governorate"], ["LIMIT", 1]]
+  [1m[36mCinema Create (0.3ms)[0m  [1m[32mINSERT INTO "cinemas" ("name", "address", "region", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["address", "26th of July Corridor, Giza Governorate"], ["region", "6th of October"], ["created_at", "2018-12-03 16:06:27.700041"], ["updated_at", "2018-12-03 16:06:27.700041"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (3.8ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.738488"], ["updated_at", "2018-12-03 16:06:27.738488"], ["movie_id", 1], ["cinema_id", 1], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.761744"], ["updated_at", "2018-12-03 16:06:27.761744"], ["movie_id", 1], ["cinema_id", 1], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.5ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.773628"], ["updated_at", "2018-12-03 16:06:27.773628"], ["movie_id", 1], ["cinema_id", 1], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.796597"], ["updated_at", "2018-12-03 16:06:27.796597"], ["movie_id", 1], ["cinema_id", 1], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.807904"], ["updated_at", "2018-12-03 16:06:27.807904"], ["movie_id", 1], ["cinema_id", 1], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.8ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.830328"], ["updated_at", "2018-12-03 16:06:27.830328"], ["movie_id", 1], ["cinema_id", 1], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.842571"], ["updated_at", "2018-12-03 16:06:27.842571"], ["movie_id", 1], ["cinema_id", 2], ["showtime", "12pm"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.865755"], ["updated_at", "2018-12-03 16:06:27.865755"], ["movie_id", 1], ["cinema_id", 2], ["showtime", "3pm"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.877349"], ["updated_at", "2018-12-03 16:06:27.877349"], ["movie_id", 1], ["cinema_id", 2], ["showtime", "6pm"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.901280"], ["updated_at", "2018-12-03 16:06:27.901280"], ["movie_id", 1], ["cinema_id", 2], ["showtime", "9pm"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.912712"], ["updated_at", "2018-12-03 16:06:27.912712"], ["movie_id", 1], ["cinema_id", 2], ["showtime", "12am"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.936197"], ["updated_at", "2018-12-03 16:06:27.936197"], ["movie_id", 1], ["cinema_id", 2], ["showtime", "10am"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.949416"], ["updated_at", "2018-12-03 16:06:27.949416"], ["movie_id", 1], ["cinema_id", 3], ["showtime", "12pm"], ["capacity", 225]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.9ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.971395"], ["updated_at", "2018-12-03 16:06:27.971395"], ["movie_id", 1], ["cinema_id", 3], ["showtime", "3pm"], ["capacity", 225]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.6ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:27.984208"], ["updated_at", "2018-12-03 16:06:27.984208"], ["movie_id", 1], ["cinema_id", 3], ["showtime", "6pm"], ["capacity", 225]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.005697"], ["updated_at", "2018-12-03 16:06:28.005697"], ["movie_id", 1], ["cinema_id", 3], ["showtime", "9pm"], ["capacity", 225]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.017785"], ["updated_at", "2018-12-03 16:06:28.017785"], ["movie_id", 1], ["cinema_id", 3], ["showtime", "12am"], ["capacity", 225]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.039492"], ["updated_at", "2018-12-03 16:06:28.039492"], ["movie_id", 1], ["cinema_id", 3], ["showtime", "10am"], ["capacity", 225]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.050875"], ["updated_at", "2018-12-03 16:06:28.050875"], ["movie_id", 1], ["cinema_id", 4], ["showtime", "12pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.7ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.072823"], ["updated_at", "2018-12-03 16:06:28.072823"], ["movie_id", 1], ["cinema_id", 4], ["showtime", "3pm"], ["capacity", 150]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.083983"], ["updated_at", "2018-12-03 16:06:28.083983"], ["movie_id", 1], ["cinema_id", 4], ["showtime", "6pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (2.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.107383"], ["updated_at", "2018-12-03 16:06:28.107383"], ["movie_id", 1], ["cinema_id", 4], ["showtime", "9pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.120125"], ["updated_at", "2018-12-03 16:06:28.120125"], ["movie_id", 1], ["cinema_id", 4], ["showtime", "12am"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.141786"], ["updated_at", "2018-12-03 16:06:28.141786"], ["movie_id", 1], ["cinema_id", 4], ["showtime", "10am"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.153032"], ["updated_at", "2018-12-03 16:06:28.153032"], ["movie_id", 1], ["cinema_id", 5], ["showtime", "12pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.176275"], ["updated_at", "2018-12-03 16:06:28.176275"], ["movie_id", 1], ["cinema_id", 5], ["showtime", "3pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.188839"], ["updated_at", "2018-12-03 16:06:28.188839"], ["movie_id", 1], ["cinema_id", 5], ["showtime", "6pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.9ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.210189"], ["updated_at", "2018-12-03 16:06:28.210189"], ["movie_id", 1], ["cinema_id", 5], ["showtime", "9pm"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.221652"], ["updated_at", "2018-12-03 16:06:28.221652"], ["movie_id", 1], ["cinema_id", 5], ["showtime", "12am"], ["capacity", 150]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Fantastic Beasts"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.243986"], ["updated_at", "2018-12-03 16:06:28.243986"], ["movie_id", 1], ["cinema_id", 5], ["showtime", "10am"], ["capacity", 150]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.257621"], ["updated_at", "2018-12-03 16:06:28.257621"], ["movie_id", 2], ["cinema_id", 1], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.281893"], ["updated_at", "2018-12-03 16:06:28.281893"], ["movie_id", 2], ["cinema_id", 1], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.292844"], ["updated_at", "2018-12-03 16:06:28.292844"], ["movie_id", 2], ["cinema_id", 1], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.313942"], ["updated_at", "2018-12-03 16:06:28.313942"], ["movie_id", 2], ["cinema_id", 1], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.326857"], ["updated_at", "2018-12-03 16:06:28.326857"], ["movie_id", 2], ["cinema_id", 1], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.347692"], ["updated_at", "2018-12-03 16:06:28.347692"], ["movie_id", 2], ["cinema_id", 1], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.358877"], ["updated_at", "2018-12-03 16:06:28.358877"], ["movie_id", 2], ["cinema_id", 2], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (2.1ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.381747"], ["updated_at", "2018-12-03 16:06:28.381747"], ["movie_id", 2], ["cinema_id", 2], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.5ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.392945"], ["updated_at", "2018-12-03 16:06:28.392945"], ["movie_id", 2], ["cinema_id", 2], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.7ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.415947"], ["updated_at", "2018-12-03 16:06:28.415947"], ["movie_id", 2], ["cinema_id", 2], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.428391"], ["updated_at", "2018-12-03 16:06:28.428391"], ["movie_id", 2], ["cinema_id", 2], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.451889"], ["updated_at", "2018-12-03 16:06:28.451889"], ["movie_id", 2], ["cinema_id", 2], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (2.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.465696"], ["updated_at", "2018-12-03 16:06:28.465696"], ["movie_id", 2], ["cinema_id", 3], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.485443"], ["updated_at", "2018-12-03 16:06:28.485443"], ["movie_id", 2], ["cinema_id", 3], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.496900"], ["updated_at", "2018-12-03 16:06:28.496900"], ["movie_id", 2], ["cinema_id", 3], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.5ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.518789"], ["updated_at", "2018-12-03 16:06:28.518789"], ["movie_id", 2], ["cinema_id", 3], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.530880"], ["updated_at", "2018-12-03 16:06:28.530880"], ["movie_id", 2], ["cinema_id", 3], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (4.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.552509"], ["updated_at", "2018-12-03 16:06:28.552509"], ["movie_id", 2], ["cinema_id", 3], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.563798"], ["updated_at", "2018-12-03 16:06:28.563798"], ["movie_id", 2], ["cinema_id", 4], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.586185"], ["updated_at", "2018-12-03 16:06:28.586185"], ["movie_id", 2], ["cinema_id", 4], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.597405"], ["updated_at", "2018-12-03 16:06:28.597405"], ["movie_id", 2], ["cinema_id", 4], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.620446"], ["updated_at", "2018-12-03 16:06:28.620446"], ["movie_id", 2], ["cinema_id", 4], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.631393"], ["updated_at", "2018-12-03 16:06:28.631393"], ["movie_id", 2], ["cinema_id", 4], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.655209"], ["updated_at", "2018-12-03 16:06:28.655209"], ["movie_id", 2], ["cinema_id", 4], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.666698"], ["updated_at", "2018-12-03 16:06:28.666698"], ["movie_id", 2], ["cinema_id", 5], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.688282"], ["updated_at", "2018-12-03 16:06:28.688282"], ["movie_id", 2], ["cinema_id", 5], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.699084"], ["updated_at", "2018-12-03 16:06:28.699084"], ["movie_id", 2], ["cinema_id", 5], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.722282"], ["updated_at", "2018-12-03 16:06:28.722282"], ["movie_id", 2], ["cinema_id", 5], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.733270"], ["updated_at", "2018-12-03 16:06:28.733270"], ["movie_id", 2], ["cinema_id", 5], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.6ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cineplex - Mall Of Arabia"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "26th of July Corridor, Giza Governorate"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "Avengers Infinity War"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.758668"], ["updated_at", "2018-12-03 16:06:28.758668"], ["movie_id", 2], ["cinema_id", 5], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (4.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.787913"], ["updated_at", "2018-12-03 16:06:28.787913"], ["movie_id", 3], ["cinema_id", 1], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.802390"], ["updated_at", "2018-12-03 16:06:28.802390"], ["movie_id", 4], ["cinema_id", 1], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (2.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.5ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.829045"], ["updated_at", "2018-12-03 16:06:28.829045"], ["movie_id", 4], ["cinema_id", 1], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.840930"], ["updated_at", "2018-12-03 16:06:28.840930"], ["movie_id", 4], ["cinema_id", 1], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.7ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.862294"], ["updated_at", "2018-12-03 16:06:28.862294"], ["movie_id", 4], ["cinema_id", 1], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Point 90 Cinema"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Point90 mall, Fifth Settlement In front of the American University، Cairo Governorate"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.873295"], ["updated_at", "2018-12-03 16:06:28.873295"], ["movie_id", 3], ["cinema_id", 1], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (2.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.896741"], ["updated_at", "2018-12-03 16:06:28.896741"], ["movie_id", 3], ["cinema_id", 2], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.907196"], ["updated_at", "2018-12-03 16:06:28.907196"], ["movie_id", 4], ["cinema_id", 2], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.6ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.930525"], ["updated_at", "2018-12-03 16:06:28.930525"], ["movie_id", 4], ["cinema_id", 2], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (2.7ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.944343"], ["updated_at", "2018-12-03 16:06:28.944343"], ["movie_id", 3], ["cinema_id", 2], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.965742"], ["updated_at", "2018-12-03 16:06:28.965742"], ["movie_id", 4], ["cinema_id", 2], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Galaxy Cairo Festival City Cinema"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Nasr City, Cairo Governorate"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:28.976842"], ["updated_at", "2018-12-03 16:06:28.976842"], ["movie_id", 3], ["cinema_id", 2], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.001070"], ["updated_at", "2018-12-03 16:06:29.001070"], ["movie_id", 3], ["cinema_id", 3], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.012564"], ["updated_at", "2018-12-03 16:06:29.012564"], ["movie_id", 3], ["cinema_id", 3], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.8ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.033834"], ["updated_at", "2018-12-03 16:06:29.033834"], ["movie_id", 3], ["cinema_id", 3], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.045307"], ["updated_at", "2018-12-03 16:06:29.045307"], ["movie_id", 3], ["cinema_id", 3], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.066795"], ["updated_at", "2018-12-03 16:06:29.066795"], ["movie_id", 3], ["cinema_id", 3], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "City Stars Cinema"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "Masaken Al Mohandesin, Nasr City, Cairo Governorate"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "A Star is Born"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.078434"], ["updated_at", "2018-12-03 16:06:29.078434"], ["movie_id", 3], ["cinema_id", 3], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.101865"], ["updated_at", "2018-12-03 16:06:29.101865"], ["movie_id", 4], ["cinema_id", 4], ["showtime", "12pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.113701"], ["updated_at", "2018-12-03 16:06:29.113701"], ["movie_id", 4], ["cinema_id", 4], ["showtime", "3pm"], ["capacity", 200]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.136298"], ["updated_at", "2018-12-03 16:06:29.136298"], ["movie_id", 4], ["cinema_id", 4], ["showtime", "6pm"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.147369"], ["updated_at", "2018-12-03 16:06:29.147369"], ["movie_id", 4], ["cinema_id", 4], ["showtime", "9pm"], ["capacity", 200]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (1.1ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.170365"], ["updated_at", "2018-12-03 16:06:29.170365"], ["movie_id", 4], ["cinema_id", 4], ["showtime", "12am"], ["capacity", 200]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["name", "Sun City Cinema"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCinema Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."address" = $1 AND "cinemas"."id" != $2 LIMIT $3[0m  [["address", "El-Nasr Rd, Sheraton Al Matar, Qism El-Nozha, Cairo Governorate"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mMovie Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "movies" WHERE "movies"."name" = $1 AND "movies"."id" != $2 LIMIT $3[0m  [["name", "The Nutcracker and the Four Realms"], ["id", 4], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("booked_no", "created_at", "updated_at", "movie_id", "cinema_id", "showtime", "capacity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["booked_no", 5], ["created_at", "2018-12-03 16:06:29.181948"], ["updated_at", "2018-12-03 16:06:29.181948"], ["movie_id", 4], ["cinema_id", 4], ["showtime", "10am"], ["capacity", 200]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/search" for 127.0.0.1 at 2018-12-03 17:06:33 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gzr02UXnewc5gJn+ANzzqrxtLjr0El6YJlFJAK/plu5h1qiLxQYQTlvvRY8U9zjFumU7lWhjr05L7nGo92AOww==", "region"=>"Tagamoa", "time"=>"10am", "commit"=>"Search"}
+  [1m[36mTicket Load (1.1ms)[0m  [1m[34m
+    Select t.*, c.*, m.*
+    from tickets t
+    inner join cinemas c on c.id = t.cinema_id
+    inner join movies m on m.id = t.movie_id
+    where c.region = 'Tagamoa' and
+          t.showtime = '10am' [0m
+  ↳ app/models/ticket.rb:12
+  Rendering home_page/search.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  Rendered home_page/search.html.erb within layouts/application (87.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 97.1ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 17:06:40 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2018-12-03 17:07:37 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6q5y3pNXwYaCMW2jDLRBlYEvgQHBNJd09XSGQCecUGGQQi6ME7aqz+BesdIYn4r6hyeUrl1FZqKYy77ofxXITA==", "region"=>"Tagamoa", "time"=>"10am", "commit"=>"Search"}
+  [1m[36mTicket Load (1.4ms)[0m  [1m[34m
+    Select t.*, c.*, m.*
+    from tickets t
+    inner join cinemas c on c.id = t.cinema_id
+    inner join movies m on m.id = t.movie_id
+    where c.region = 'Tagamoa' and
+          t.showtime = '10am' [0m
+  ↳ app/models/ticket.rb:12
+  Rendering home_page/search.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.2ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  Rendered home_page/search.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 34.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2018-12-03 17:07:40 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6q5y3pNXwYaCMW2jDLRBlYEvgQHBNJd09XSGQCecUGGQQi6ME7aqz+BesdIYn4r6hyeUrl1FZqKYy77ofxXITA==", "region"=>"Tagamoa", "time"=>"10am", "commit"=>"Search"}
+  [1m[36mTicket Load (1.0ms)[0m  [1m[34m
+    Select t.*, c.*, m.*
+    from tickets t
+    inner join cinemas c on c.id = t.cinema_id
+    inner join movies m on m.id = t.movie_id
+    where c.region = 'Tagamoa' and
+          t.showtime = '10am' [0m
+  ↳ app/models/ticket.rb:12
+  Rendering home_page/search.html.erb within layouts/application
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.4ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.3ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.1ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  Rendered home_page/search.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 36.2ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2018-12-03 17:07:53 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6q5y3pNXwYaCMW2jDLRBlYEvgQHBNJd09XSGQCecUGGQQi6ME7aqz+BesdIYn4r6hyeUrl1FZqKYy77ofxXITA==", "region"=>"Tagamoa", "time"=>"10am", "commit"=>"Search"}
+  [1m[36mTicket Load (0.8ms)[0m  [1m[34m
+    Select t.*, c.*, m.*
+    from tickets t
+    inner join cinemas c on c.id = t.cinema_id
+    inner join movies m on m.id = t.movie_id
+    where c.region = 'Tagamoa' and
+          t.showtime = '10am' [0m
+  ↳ app/models/ticket.rb:12
+  Rendering home_page/search.html.erb within layouts/application
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (1.9ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCinema Load (0.5ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:27
+  [1m[36mCACHE Cinema Load (0.0ms)[0m  [1m[34mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home_page/search.html.erb:30
+  Rendered home_page/search.html.erb within layouts/application (36.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 50.3ms | ActiveRecord: 5.4ms)
+
+
