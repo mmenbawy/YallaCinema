@@ -10289,3 +10289,224 @@ Processing by HomePageController#search as HTML
 Completed 200 OK in 53ms (Views: 36.8ms | ActiveRecord: 4.9ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(880892881333229520)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeTimeFromIntToStringInTicket (20181203051752)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "tickets" DROP COLUMN "time"[0m
+  ↳ db/migrate/20181203051752_change_time_from_int_to_string_in_ticket.rb:4
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "tickets" ADD "time" character varying[0m
+  ↳ db/migrate/20181203051752_change_time_from_int_to_string_in_ticket.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203051752"]]
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(880892881333229520)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (5011.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yalla-cinema_development"[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (109.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yalla-cinema_development"[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (111.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "yalla-cinema_test"[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (371.2ms)[0m  [1m[35mCREATE DATABASE "yalla-cinema_development" ENCODING = 'unicode'[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (352.6ms)[0m  [1m[35mCREATE DATABASE "yalla-cinema_test" ENCODING = 'unicode'[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(880892881333229520)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateCinemas (20181202150440)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "cinemas" ("id" bigserial primary key, "name" character varying, "address" character varying, "region" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202150440_create_cinemas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202150440"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMovies (20181202150558)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "name" character varying, "duration" integer, "release_date" date, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202150558_create_movies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202150558"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateTickets (20181202150819)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" bigserial primary key, "booked_no" integer, "time" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202150819_create_tickets.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202150819"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddMidCidToTicket (20181202185359)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "tickets" ADD "movie_id" integer[0m
+  ↳ db/migrate/20181202185359_add_mid_cid_to_ticket.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "tickets" ADD "cinema_id" integer[0m
+  ↳ db/migrate/20181202185359_add_mid_cid_to_ticket.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202185359"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to ChangeDurationFromIntegerToFloat (20181202220940)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "movies" DROP COLUMN "duration"[0m
+  ↳ db/migrate/20181202220940_change_duration_from_integer_to_float.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "movies" ADD "duration" float[0m
+  ↳ db/migrate/20181202220940_change_duration_from_integer_to_float.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202220940"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to ChangeTimeFromIntToStringInTicket (20181203051752)
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "tickets" DROP COLUMN "time"[0m
+  ↳ db/migrate/20181203051752_change_time_from_int_to_string_in_ticket.rb:4
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "tickets" ADD "time" character varying[0m
+  ↳ db/migrate/20181203051752_change_time_from_int_to_string_in_ticket.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203051752"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-03 05:19:56.054247"], ["updated_at", "2018-12-03 05:19:56.054247"]]
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(880892881333229520)[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:32:21 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mostafa/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2018-12-03 06:32:33 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohkq77nKGrDfGjjUJcb/Az4pmH9oWy7Wz82QdEWK4WvY9Xa9OStx+b115KUx7TRsOCGN0PQq3wCicqjcHQN5Rg==", "region"=>"tagamoa", "time"=>"", "commit"=>"Search"}
+Redirected to http://localhost:3000/search
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:32:33 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:46:55 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2018-12-03 06:47:07 +0100
+Processing by HomePageController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xp5BoqZ6090P565PJpNoEKU5m8RQ1QQdSSYlC9LthSEkch3wJpu4lG2Icj4yuKN/ozGOa8yk9cskmR2jimQdDA==", "region"=>"tagamoa", "time"=>"9", "commit"=>"Search"}
+  [1m[36mTicket Load (3.5ms)[0m  [1m[34m
+    Select t.*, c.*, m.*
+    from tickets t
+    inner join cinemas c on c.id = t.cinema_id
+    inner join movies m on m.id = t.movie_id
+    where c.region = 'tagamoa' and
+          t.time = '9' [0m
+  ↳ app/models/ticket.rb:12
+  Rendering home_page/search.html.erb within layouts/application
+  Rendered home_page/search.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 100ms (Views: 37.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:47:09 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:47:54 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:48:07 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2018-12-03 06:50:25 +0100
+Processing by HomePageController#show as HTML
+  Rendering home_page/show.html.erb within layouts/application
+  Rendered home_page/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+

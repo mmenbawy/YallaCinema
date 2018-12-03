@@ -40,8 +40,16 @@
             </div>
             <div class="col-sm-5" style="background-color:lavender;">
               <div class=" has-feedback">
-                <%= label_tag(:time, "Time:") %>
-                <%= text_field_tag( :time, nil, class: "form-control" ) %>
+                <%= label_tag(:time, "Showtime:") %>
+                <br/>
+                <select id="time" name="time">
+                <option value="12">1:00 pm</option>
+                <option value="3">3:45 pm</option>
+                <option value="6">6:45 pm</option>
+                <option value="9">9:45 pm</option>
+                <option value="12">12:45 am</option>
+                <option value="10">10:15 am</option>
+                </select>
                </div> 
             </div>   
           </div>
