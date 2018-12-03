@@ -7,7 +7,7 @@ class Ticket < ApplicationRecord
 validates_associated :cinema, :movie
 
 
- def self.find_ticket(region, time) 
+ def self.find_ticket(region, showtime) 
 
     Ticket.find_by_sql(["
     Select t.*, c.*, m.*
@@ -15,8 +15,8 @@ validates_associated :cinema, :movie
     inner join cinemas c on c.id = t.cinema_id
     inner join movies m on m.id = t.movie_id
     where c.region = ? and
-          t.time = ? ",
-    region, time])
+          t.showtime = ? ",
+    region, showtime])
  end
 
 end

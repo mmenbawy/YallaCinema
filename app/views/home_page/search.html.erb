@@ -12,7 +12,8 @@
       <th>Genre</th>
       <th>Cinema</th>
       <th>Address</th>           
-      <th>Region</th>  
+      <th>Region</th> 
+      <th>Number of available seats</th>  
       <th>Book</th>    
       <th colspan="3"></th>
     </tr>
@@ -29,6 +30,7 @@
         <td><%= ticket.cinema.name %></td>
         <td><%= ticket.cinema.address %></td>
         <td><%= ticket.cinema.region %></td>
+        <td><%= ticket.capacity-ticket.booked_no %> </td>
         <td><%= radio_button_tag(:ticket_id, ticket.id) %></td>  
     </tr>
     <% end %>

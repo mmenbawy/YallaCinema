@@ -3,4 +3,6 @@ class Cinema < ApplicationRecord
 
     validates :name, :address, :region,
            presence: true
+    validates :name, :address, uniqueness: { case_senstive: false }
+
 end
