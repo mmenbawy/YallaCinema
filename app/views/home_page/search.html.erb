@@ -1,0 +1,44 @@
+
+<div class="col-md-10 col-md-offset-1 ">
+
+
+<br>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Movie name</th>
+      <th>Duration</th>
+      <th>Genre</th>
+      <th>Cinema</th>
+      <th>Address</th>           
+      <th>Region</th>  
+      <th>Book</th>    
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+<%= form_tag("/book", method: "post") do %>
+
+  <tbody>
+    <% Array(@tickets).each do |ticket| %>
+    <tr>
+        <td><%= ticket.movie.name %></td>
+        <td><%= ticket.movie.duration %></td>
+        <td><%= ticket.movie.genre %></td>
+        <td><%= ticket.cinema.name %></td>
+        <td><%= ticket.cinema.address %></td>
+        <td><%= ticket.cinema.region %></td>
+        <td><%= radio_button_tag(:ticket_id, ticket.id) %></td>  
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= submit_tag("Book", class: "btn btn-danger") %>
+<% end %>
+
+
+
+
+</div>
