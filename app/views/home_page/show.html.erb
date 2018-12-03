@@ -1,1 +1,64 @@
-I am still alive
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+
+
+<body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-md-6 col-md-offset-3 ">
+
+<div class="panel panel-primary" style="background-color:lavender;">
+    <div class="panel-heading">Search Movies tonight</div>
+      <div class="panel-body" >
+      
+        
+          <%= form_tag("/search", method: "post") do %>
+
+          <div class="row">
+            <div class="col-sm-5" style="background-color:lavender;">
+               <div class=" has-feedback">
+                <%= label_tag(:region, "Region") %>
+                <%= text_field_tag(:region, nil, class: "form-control") %>
+                
+            </div>
+            </div>
+            <div class="col-sm-5" style="background-color:lavender;">
+              <div class=" has-feedback">
+                <%= label_tag(:time, "Time:") %>
+                <%= text_field_tag( :time, nil, class: "form-control" ) %>
+               </div> 
+            </div>   
+          </div>
+
+           
+            <div> 
+            <%= submit_tag("Search", class: "btn btn-danger") %>              
+            </div>
+
+          <% end %>
+
+      
+    </div>      
+  </div>
+</div>
+
+
+
+
+  
